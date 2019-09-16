@@ -1,2 +1,2 @@
 # geekuniversity_logica_de_programacao
-Exercícios do curso Algoritmos e Lógica de Programação (Geek University)
+Exercícios do curso Algoritmos e Lógica de Programação (Geek University) em C, Java e Python.
