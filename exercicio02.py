@@ -1,9 +1,18 @@
-"""Seção 07 - Exercício 02
+"""Seção 06 - Exercício 02
 
-Faça um algoritmo que conte de 1 até 100 e a cada múltiplo de 10 emita uma mensagem: "Múltiplo de 10". """
+Elabore um aloritmo que leia um número. Se positivo, armazene-o em "a", se negativo, em "b".
+No final, mostre o resultado."""
+
+# entrada
+n = int(input("Defina um valor para a variável N: "))
 
 # processamento e saída
-for n in range(1,101):
-    print(n)
-    if n % 10 == 0:
-        print("Múltiplo de 10")
+
+if n > 0:
+    a = n
+    print("Valor positivo")
+    print(a)
+else:
+    b = n
+    print("Valor negativo")
+    print(b)

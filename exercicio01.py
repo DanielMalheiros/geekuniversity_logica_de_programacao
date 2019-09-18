@@ -1,17 +1,14 @@
-"""Seção 07 - Exercício 01
+"""Seção 006 - Exercício 01
 
-Faça um algoritmo que determine o maior entre N números. A condição de parada é a entrada de um valor 0,
-ou seja, o algoritmo deve continuar recebendo e calculando o maior valor até que a entrada seja 0 (zero)."""
+Ler uma variável númerica N e imprimi-la somente se a mesma for maior que 100, caso
+contrario, imprimi-la como zero"""
 
-# variáveis e entrada
-n = int(input("Informe um número: "))
-maior = -100000000000000
+# entrada
+n = int(input("Defina um valor para variável N: "))
 
-# processamento
-while n != 0:
-    if n > maior:
-        maior = n
-    n = int(input("Informe um número: "))
-
-# saída
-print("O maior valor informado foi {0}.".format(maior))
+# processamento e saída
+if n > 100:
+    print(n)
+else:
+    n = 0
+    print(n)

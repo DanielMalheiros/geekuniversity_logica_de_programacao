@@ -1,30 +1,19 @@
-"""Seção 07 - Exercício 04
+"""Seção 06 - Exercício 04
 
-Construa um algoritmo que leia 10 valores inteiros e positivos e:
-a) Encontre o maior valor
-b) Encontre o menor valor
-c) Calcule a média entre os valores
-"""
+Tendo em conta dados de entrada como altura e sexo de uma pessoa, contrua um
+algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+Para homens (72.7 * altura) -58
+Para mulheres (62.1 * altura) - 44.7"""
 
-# variáveis
-maior = -999
-menor = 999
-soma = 0
+# entradas
+altura = float(input("Informe sua altura: "))
+sexo = input("Informe seu sexo: (M/F)")
 
-# entrada e processamento
-for n in range(1, 11):
-    valor = int(input("Informe um valor: {0}/10".format(n)))
-    if valor > 0:
-        if valor > maior:
-            maior = valor
-        if valor < menor:
-            menor = valor
-        soma = soma + valor
-    else:
-        valor = int(input("Informe um valor positivo: "))
-media = soma / 10
-
-# saída
-print("O maior número é {0}.".format(maior))
-print("O menor número é {0}.".format(menor))
-print("A média entre os números é {0}.".format(media))
+if sexo.lower() == "m":
+    peso_ideal = (72.7 * altura) - 58
+elif sexo.lower() == "f":
+    peso_ideal = (62.1 * altura) - 44.7
+else:
+    print("Sexo não reconhecido.")
+    peso_ideal = "(ERRO)"
+print("Seu peso ideal é de {0:.2f} quilos.".format(peso_ideal))

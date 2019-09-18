@@ -1,23 +1,26 @@
-"""Seção 07 - Exercício 06
+"""Seção 06 - Exercício 06
 
-Desenvolva um gerador de tabuada capaz de gerar a tabuada de qualquer número
-inteiro entre 1 a 10. O usúario deve informar de qual número ele deseja ver a
-tabuada. A saída deve ser conforme o exemplo abaixo:
+Elabore um algoritmo que leia as varíaveis "c" e "n", respectivamente código e número de horas trabalhadas
+de um operário. Calcule o salário sabendo-se que ele ganha R$10,00 por hora. Quando o número de horas
+trabalhadas exceder a 5, calcule o excesso de pagamento armazenando-o na variável "e". Caso contrario,
+zerar tal variável. A hora excedente de trabalho vale R$20,00. No final do processamento, imprima o
+salário total e o salário excedente."""
 
-Tabuada de 5:
-5 X 1 = 5
-5 X 2 = 10
-...
-5 X 10 = 50
-"""
+# variáveis
+valor_hora = 10.00
+valor_hora_excedente = 20.00
+e = 0
 
-# entrada
-numero = int(input("Informe um número entre 1 e 10: "))
+# entradas
+c = int(input("Informe seu código: "))
+n = float(input("Quantas horas você trabalhou neste mês? "))
 
-# processamento e saída
-while numero < 1 or numero > 10:
-    numero = int(input("Informe um número entre 1 e 10: "))
-print("Tabuada de {0}:".format(numero))
-for n in range(1,11):
-    print("{0} X {1} = {2}".format(numero, n, (numero * n)))
-
+# processamento
+if n > 50:
+    e = (n - 50) * valor_hora_excedente
+    salario_total = 50 * valor_hora + e
+    print("Salario base: R${0:.2f}   Salário excedente: R${1:.2f}".format(50 * 10, e))
+    print("Salário total: R${0:.2f}".format(salario_total))
+else:
+    print("Salário total: R${0:.2f}".format(n * 10))
+    print("Salário excedente: R${0:.2f}".format(e))
