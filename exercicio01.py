@@ -1,15 +1,17 @@
-"""Seção 08 - Exercício 01
+"""Seção 07 - Exercício 01
 
-Faça um algoritmo que carregue um vetor de 5 elementos inteiros e em seguida armazene em um vetor apenas os
-números pares maiores que 0. No final, mostrar os elementos do vetor."""
+Faça um algoritmo que determine o maior entre N números. A condição de parada é a entrada de um valor 0,
+ou seja, o algoritmo deve continuar recebendo e calculando o maior valor até que a entrada seja 0 (zero)."""
 
-# variáveis
-vetor = []
-pares = []
+# variáveis e entrada
+n = int(input("Informe um número: "))
+maior = -100000000000000
 
-for n in range(1,6):
-    vetor.append(n)
-    if n % 2 ==0:
-        pares.append(n)
-for p in pares:
-    print(p)
+# processamento
+while n != 0:
+    if n > maior:
+        maior = n
+    n = int(input("Informe um número: "))
+
+# saída
+print("O maior valor informado foi {0}.".format(maior))

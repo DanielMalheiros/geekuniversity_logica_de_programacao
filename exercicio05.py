@@ -1,21 +1,16 @@
-"""Seção 08 - Exercício 05
+"""Seção 07 - Exercício 05
 
-Faça um programa que carregue um vetor de dez números inteiros. Calcule e mostre os números superiores a
-50 e suas respectivas posições. Mostrar mensagem se não existir nenhum número nesta condição."""
-
-# variáveis
-
-vetor = []
-tem_maior_50 = False
+Faça um programa que leia um nome de usuário e sua senha e não aceite
+a senha igual ao nome do usúario, mostrando uma mensagem de erro e
+voltando a pedir informações"""
 
 # entrada
-for n in range(0,10):
-    num = int(input("Informe {} valor para o vetor:".format(n+1)))
-    vetor.append(num)
-for n in vetor:
-    if n > 50:
-        print("O número {0} está na posição {1} do vetor.".format(n, vetor.index(n)))
-        # .index(n) mostrará a posição de n no vetor
-        tem_maior_50 = True
-if tem_maior_50 == False:
-    print("Não existe valor maior que 50.")
+usuario = input("Defina o usuário: ")
+senha = input("Informe a senha: ")
+
+# processamento
+while usuario == senha:
+    print("Usuário e senha devem ser diferentes.")
+    usuario = input("Defina o usuário: ")
+    senha = input("Informe a senha: ")
+

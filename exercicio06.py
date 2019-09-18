@@ -1,28 +1,23 @@
-"""Seção 08 - Exercício 06
+"""Seção 07 - Exercício 06
 
-Faça um programa que receba um código númerico inteiro e um vetor de cinco posições
-de números reais. Se o código for zero, termine o programa. Se o código for 1, mostre
-o vetor na ordem direta. Se o código for 2, mostre o vetor na ordem inversa."""
+Desenvolva um gerador de tabuada capaz de gerar a tabuada de qualquer número
+inteiro entre 1 a 10. O usúario deve informar de qual número ele deseja ver a
+tabuada. A saída deve ser conforme o exemplo abaixo:
 
-# variável
-vetor = []
+Tabuada de 5:
+5 X 1 = 5
+5 X 2 = 10
+...
+5 X 10 = 50
+"""
 
 # entrada
-codigo = int(input("Informe o código: "))
-
+numero = int(input("Informe um número entre 1 e 10: "))
 
 # processamento e saída
-if codigo != 0:
-    if codigo != 1 and codigo != 2:
-        print("Codigo inválido.")
-        codigo = int(input("Informe o código: "))
-    for n in range(0, 5):
-        num = float(input("Informe um valor real para o vetor:"))
-        vetor.append(num)
-    if codigo == 1:
-        for n in vetor:
-            print(n)
-    elif codigo == 2:
-        vetor.reverse()
-        for n in vetor:
-            print(n)
+while numero < 1 or numero > 10:
+    numero = int(input("Informe um número entre 1 e 10: "))
+print("Tabuada de {0}:".format(numero))
+for n in range(1,11):
+    print("{0} X {1} = {2}".format(numero, n, (numero * n)))
+

@@ -1,17 +1,9 @@
-"""Seção 08 - Exercício 03
+"""Seção 07 - Exercício 03
 
-Faça um programa que carregue um vetor com dez números inteiros. Mostre o vetor
-na ordem inversa a que foi digitado."""
+"Elabore um programa que gere e escreva os números ímpares dos números entre 100 e 200."""
 
-# variável
-vetor = []
+# processamento e saída
 
-# entrada e processamento
-for n in range(0, 10):
-    num = int(input("Informe o valor para o vetor ({0}/10):".format(n+1)))
-    vetor.append(num)
-
-vetor.reverse()  # inverte a lista
-for n in vetor:
-    print(n)
-
+for n in range(100, 201):
+    if n % 2 != 0:
+        print(n)
