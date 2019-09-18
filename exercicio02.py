@@ -1,18 +1,16 @@
-"""Seção 06 - Exercício 02
+"""Seção 02 - Exercício 02
 
-Elabore um aloritmo que leia um número. Se positivo, armazene-o em "a", se negativo, em "b".
-No final, mostre o resultado."""
+Faça um algoritmo para somar dois números e multiplicar o resultado
+pelo primeiro número
+"""
 
-# entrada
-n = int(input("Defina um valor para a variável N: "))
+# entradas
+num1 = int(input("Informe o primeiro número: "))
+num2 = int(input("Informe o segundo número: "))
 
-# processamento e saída
+# processamento
+soma = num1 + num2
+multiplicacao = soma * num1
 
-if n > 0:
-    a = n
-    print("Valor positivo")
-    print(a)
-else:
-    b = n
-    print("Valor negativo")
-    print(b)
+# saída
+print("O resultado da multiplicação é {0}.".format(multiplicacao))
