@@ -1,14 +1,18 @@
-"""Seção 006 - Exercício 01
+"""Seção 03 - Exercício 02
 
-Ler uma variável númerica N e imprimi-la somente se a mesma for maior que 100, caso
-contrario, imprimi-la como zero"""
+Faça um algoritmo para calcular o estoque médio de uma peça, sendo que:
 
-# entrada
-n = int(input("Defina um valor para variável N: "))
+estoque_medio = (quantidade_minima + quantidade_maxima) / 2
+"""
+
+# entradas
+quantidade_minima = int(input("Informe a quantidade mínima: "))
+quantidade_maxima = int(input("Informe a quantidade máxima: "))
 
 # processamento e saída
-if n > 100:
-    print(n)
-else:
-    n = 0
-    print(n)
+estoque_medio = (quantidade_minima + quantidade_maxima) / 2
+print("O estoque médio é: {0}.".format(estoque_medio))
+
+
+
+
